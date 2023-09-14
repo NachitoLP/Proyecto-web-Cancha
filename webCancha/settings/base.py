@@ -20,6 +20,8 @@ INSTALLED_APPS = [
     
     #Local Apps
     'applications.home',
+    'applications.reservas',
+    'applications.usuarios',
 ]
 
 MIDDLEWARE = [

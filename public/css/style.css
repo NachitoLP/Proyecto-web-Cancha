@@ -98,7 +98,7 @@
   margin: auto; }
   .section_instalaciones h3 {
     margin: 20px auto;
-    font-size: 24px;
+    font-size: 28px;
     color: white; }
   .section_instalaciones .div_foto_cancha {
     display: flex;
@@ -225,7 +225,7 @@
           text-decoration: none;
           list-style: none;
           transition: 0.3s;
-          background-color: rgba(0, 182, 118, 0.8);
+          background-color: #00b676;
           border-radius: 20px;
           padding: 10px 20px; }
           .section_header_y_reserva .header_nav .header_navbar_list li a:hover {
