@@ -1,0 +1,93 @@
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    width: 100%;
+    min-width: 300px;
+
+    .footer_up_button {
+        background-color: $color-primary;
+        border-top-left-radius: 150px;
+        border-top-right-radius: 150px;
+        padding: 10px 13px 10px 13px;
+        transition: 0.2s;
+        position: fixed;
+        bottom: 0;
+        z-index: 1;
+        right: 10px;
+    
+        &:hover {
+            background-color: $color-primary;
+            transition: 0, 2s;
+        }
+    }
+    
+    .footer_list {
+        li {
+            display: inline-block;
+            margin: 30px 50px 15px 50px !important;
+            text-decoration: none;
+            list-style-type: none;
+        }
+    }
+    
+    .footer_list_cel {
+        display: none;
+    }
+
+    p {
+        margin-bottom: 10px;
+        display: inline-block;
+        color: grey;
+        opacity: 0.6;
+        font-weight: bold;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
+
+
+
+
+
+/* RESPONSIVE FOOTER */
+
+@media(max-width:673px) {
+    .footer_list {
+        display: none;
+    }
+
+    .footer_list_cel {
+        display: inline-block !important;
+        margin-top: 10px;
+
+        a{
+            margin: 0px 20px;
+        }
+    }
+
+    .fa-instagram {
+        margin: 30px 0px !important;
+        padding: 0 !important;
+    }
+
+    .fa-twitter {
+        margin: 30px 0px !important;
+        padding: 0 !important;
+    }
+
+    .fa-whatsapp {
+        margin: 30px 0px !important;
+        padding: 0 !important;
+    }
+}

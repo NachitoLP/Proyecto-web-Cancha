@@ -1,0 +1,223 @@
+/* NAV */
+.section_header_y_reserva {
+    position: relative;
+    overflow: hidden;
+
+    .img_fondo_nav {
+        opacity: 0.7;
+        height: fit-content;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .div_header_y_reserva{
+        position:relative;
+    }
+
+    .header_nav {
+        height: 70px;
+        width: 100%;
+        min-width: 300px;
+        display: flex;
+        justify-content: center;
+    
+        .btn_check {
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 60px;
+            margin-right: 20px;
+            cursor: pointer;
+            display: none;
+        }
+    
+        #check {
+            display: none;
+        }
+    
+        .company_name_title{
+            a{
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+                ::after{
+                    color: rgb(2, 64, 0);
+                }
+            }
+            h2{
+                text-align: center;
+                margin-left: 20px;
+                line-height: 70px;
+                position: absolute;
+                font-weight: bold;
+                left: 0px;
+            }
+        }
+        
+        .icons_header_login {
+            position: absolute;
+            right: 0px;
+            display: flex;
+            margin: 10px 15px;
+    
+            a {
+                margin: 0px 15px;
+    
+                div {
+                    color: white;
+                    height: fit-content;
+                    font-weight: bold;
+                    transition: 0.3s;
+                    
+                    &:hover {
+                        color: rgb(0, 0, 0);
+                        transition: 0.3s;
+                    }
+                    span {
+                        display: block;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .header_navbar_list_cel {
+            display: none;
+        }
+    
+        .header_navbar_list {
+            display: flex;
+            width: 40%;
+            justify-content: space-between !important;
+            text-align: center;
+            line-height: 70px;
+    
+            li {
+                margin: 0px 0px;
+    
+                a {
+                    color: white;
+                    font-weight: bold;
+                    text-decoration: none;
+                    list-style: none;
+                    transition: 0.3s;
+                    background-color: $color-primary;
+                    border-radius: 20px;
+                    padding: 10px 20px;
+    
+                    &:hover {
+                        background-color: rgb(0, 0, 0);
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+
+/* NAV RESPONSIVE */
+
+@media(max-width:1200px) {
+    .header_nav {
+        .company_name_title {
+            display: none;
+        }
+        .header_navbar_list {
+            display: none !important;
+        }
+        .header_navbar_list_cel {
+            display: flex !important;
+            width: 40%;
+            justify-content: space-between !important;
+            text-align: center;
+    
+            li {
+                margin: 0px 0px;
+
+                .container_icons_1200px{
+                    color: white;
+                    font-weight: bold;
+                    text-decoration: none;
+                    list-style: none;
+                    transition: 0.3s;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0px;
+
+                    i{
+                        padding: 0px;
+                        margin-top: 20px;
+                        margin-bottom: 5px;
+                    }
+                    label{
+                        padding: 0px;
+                        margin: 0px;
+                    }
+    
+                    &:hover {
+                        background-color: rgb(0, 0, 0);
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:798px) {
+    .fondo_futbol{
+        .header_nav {
+            justify-content: center;
+    
+            .btn_check {
+                display: block;
+            }
+    
+            .icons_header_login{
+                position: initial;
+            }
+    
+            #check:checked~.header_navbar_list {
+                left: 0;
+            }
+
+            .header_navbar_list_cel {
+                display: none !important;
+            }
+            
+            .header_navbar_list {
+                position: fixed;
+                display: block !important;
+                line-height: 30px;
+                text-align: center;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.904);
+                top: 70px;
+                left: -100%;
+                transition: all 0.5s;
+                
+                li {
+                    margin: 10px 0px;
+                    .list_icons {
+                        display: none;
+                    }
+                    
+                    a {
+                        background-color: transparent;
+                        font-size: 20px;
+    
+                        &:hover {
+                            background: none;
+                            background-color: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,359 @@
+/* VARIABLES */
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif; }
+  *::selection {
+    color: rgba(0, 182, 118, 0.8);
+    background-color: black; }
+
+/* VIEWS */
+.section_reservas {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  background: #25b600;
+  background: linear-gradient(0deg, rgba(0, 182, 118, 0.8) 27%, rgba(0, 182, 118, 0.5) 71%, rgba(255, 255, 255, 0) 94%); }
+  .section_reservas .div_conocenos {
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; }
+    .section_reservas .div_conocenos .div_form_reservar {
+      margin: auto 10px;
+      width: 40%;
+      padding-right: 10px; }
+      .section_reservas .div_conocenos .div_form_reservar div {
+        width: 100%; }
+        .section_reservas .div_conocenos .div_form_reservar div label {
+          display: block;
+          font-weight: 600;
+          margin-left: 10px; }
+        .section_reservas .div_conocenos .div_form_reservar div input, .section_reservas .div_conocenos .div_form_reservar div select {
+          width: 100%;
+          height: 40px;
+          display: block;
+          border-radius: 20px;
+          border: none;
+          transition: 0.3s;
+          margin-bottom: 15px; }
+          .section_reservas .div_conocenos .div_form_reservar div input::placeholder, .section_reservas .div_conocenos .div_form_reservar div select::placeholder {
+            color: black;
+            padding-left: 10px; }
+      .section_reservas .div_conocenos .div_form_reservar #button_reservar {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        list-style: none;
+        transition: 0.3s;
+        font-size: 18px;
+        background-color: #08663f;
+        border-radius: 10px;
+        border: none;
+        padding: 10px 20px;
+        margin: 20px auto;
+        display: block; }
+        .section_reservas .div_conocenos .div_form_reservar #button_reservar:hover {
+          background-color: black;
+          transition: 0.3s;
+          color: white; }
+      .section_reservas .div_conocenos .div_form_reservar #input_type_date, .section_reservas .div_conocenos .div_form_reservar div select {
+        padding: 10px; }
+    .section_reservas .div_conocenos .div_conocenos_texto {
+      margin: auto;
+      width: 50%;
+      margin-left: 70px; }
+      .section_reservas .div_conocenos .div_conocenos_texto h3 {
+        font-size: 40px;
+        font-weight: bolder; }
+      .section_reservas .div_conocenos .div_conocenos_texto p {
+        font-size: 24px;
+        color: black;
+        width: 80%; }
+  .section_reservas .div_informacion_util {
+    width: 25%;
+    margin: auto 40px;
+    border-left: 2px solid black;
+    padding-left: 20px; }
+    .section_reservas .div_informacion_util h3 {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 40px; }
+    .section_reservas .div_informacion_util p {
+      font-size: 18px;
+      text-align: justify;
+      font-weight: 600; }
+
+.section_instalaciones {
+  display: flex;
+  background-color: black;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  margin: auto; }
+  .section_instalaciones h3 {
+    margin: 20px auto;
+    font-size: 24px;
+    color: white; }
+  .section_instalaciones .div_foto_cancha {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 50px; }
+    .section_instalaciones .div_foto_cancha img {
+      width: 30%;
+      margin: 0px 20px; }
+    .section_instalaciones .div_foto_cancha p {
+      margin: 50px 20px 0px 0px;
+      color: white;
+      font-weight: 600;
+      line-height: 25px;
+      text-align: justify; }
+  .section_instalaciones .div_foto_bufete {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px; }
+    .section_instalaciones .div_foto_bufete img {
+      width: 30%;
+      margin: 0px 20px; }
+    .section_instalaciones .div_foto_bufete p {
+      font-weight: 600;
+      margin: 50px 0px 0px 20px;
+      color: white;
+      line-height: 25px;
+      text-align: justify; }
+
+/* COMPONENTES */
+/* ICONOS */
+.fa-solid {
+  margin-right: 5px;
+  color: white; }
+
+.main_formacion_list .fa-solid {
+  margin-left: 5px;
+  color: white;
+  transition: 0s; }
+
+.main_formacion_list .fa-brands {
+  margin-left: 5px;
+  color: white;
+  transition: 0s; }
+
+.fa-brands {
+  margin-right: 5px; }
+
+#up_arrow {
+  margin: 0; }
+
+/* NAV */
+.section_header_y_reserva {
+  position: relative;
+  overflow: hidden; }
+  .section_header_y_reserva .img_fondo_nav {
+    opacity: 0.7;
+    height: fit-content;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto; }
+  .section_header_y_reserva .div_header_y_reserva {
+    position: relative; }
+  .section_header_y_reserva .header_nav {
+    height: 70px;
+    width: 100%;
+    min-width: 300px;
+    display: flex;
+    justify-content: center; }
+    .section_header_y_reserva .header_nav .btn_check {
+      font-size: 30px;
+      color: white;
+      float: right;
+      line-height: 60px;
+      margin-right: 20px;
+      cursor: pointer;
+      display: none; }
+    .section_header_y_reserva .header_nav #check {
+      display: none; }
+    .section_header_y_reserva .header_nav .company_name_title a {
+      text-decoration: none;
+      color: white; }
+      .section_header_y_reserva .header_nav .company_name_title a ::after {
+        color: #024000; }
+    .section_header_y_reserva .header_nav .company_name_title h2 {
+      text-align: center;
+      margin-left: 20px;
+      line-height: 70px;
+      position: absolute;
+      font-weight: bold;
+      left: 0px; }
+    .section_header_y_reserva .header_nav .icons_header_login {
+      position: absolute;
+      right: 0px;
+      display: flex;
+      margin: 10px 15px; }
+      .section_header_y_reserva .header_nav .icons_header_login a {
+        margin: 0px 15px; }
+        .section_header_y_reserva .header_nav .icons_header_login a div {
+          color: white;
+          height: fit-content;
+          font-weight: bold;
+          transition: 0.3s; }
+          .section_header_y_reserva .header_nav .icons_header_login a div:hover {
+            color: black;
+            transition: 0.3s; }
+          .section_header_y_reserva .header_nav .icons_header_login a div span {
+            display: block;
+            text-align: center; }
+    .section_header_y_reserva .header_nav .header_navbar_list_cel {
+      display: none; }
+    .section_header_y_reserva .header_nav .header_navbar_list {
+      display: flex;
+      width: 40%;
+      justify-content: space-between !important;
+      text-align: center;
+      line-height: 70px; }
+      .section_header_y_reserva .header_nav .header_navbar_list li {
+        margin: 0px 0px; }
+        .section_header_y_reserva .header_nav .header_navbar_list li a {
+          color: white;
+          font-weight: bold;
+          text-decoration: none;
+          list-style: none;
+          transition: 0.3s;
+          background-color: rgba(0, 182, 118, 0.8);
+          border-radius: 20px;
+          padding: 10px 20px; }
+          .section_header_y_reserva .header_nav .header_navbar_list li a:hover {
+            background-color: black;
+            transition: 0.3s; }
+
+/* NAV RESPONSIVE */
+@media (max-width: 1200px) {
+  .header_nav .company_name_title {
+    display: none; }
+  .header_nav .header_navbar_list {
+    display: none !important; }
+  .header_nav .header_navbar_list_cel {
+    display: flex !important;
+    width: 40%;
+    justify-content: space-between !important;
+    text-align: center; }
+    .header_nav .header_navbar_list_cel li {
+      margin: 0px 0px; }
+      .header_nav .header_navbar_list_cel li .container_icons_1200px {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        list-style: none;
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+        margin: 0px; }
+        .header_nav .header_navbar_list_cel li .container_icons_1200px i {
+          padding: 0px;
+          margin-top: 20px;
+          margin-bottom: 5px; }
+        .header_nav .header_navbar_list_cel li .container_icons_1200px label {
+          padding: 0px;
+          margin: 0px; }
+        .header_nav .header_navbar_list_cel li .container_icons_1200px:hover {
+          background-color: black;
+          transition: 0.3s; } }
+
+@media (max-width: 798px) {
+  .fondo_futbol .header_nav {
+    justify-content: center; }
+    .fondo_futbol .header_nav .btn_check {
+      display: block; }
+    .fondo_futbol .header_nav .icons_header_login {
+      position: initial; }
+    .fondo_futbol .header_nav #check:checked ~ .header_navbar_list {
+      left: 0; }
+    .fondo_futbol .header_nav .header_navbar_list_cel {
+      display: none !important; }
+    .fondo_futbol .header_nav .header_navbar_list {
+      position: fixed;
+      display: block !important;
+      line-height: 30px;
+      text-align: center;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.904);
+      top: 70px;
+      left: -100%;
+      transition: all 0.5s; }
+      .fondo_futbol .header_nav .header_navbar_list li {
+        margin: 10px 0px; }
+        .fondo_futbol .header_nav .header_navbar_list li .list_icons {
+          display: none; }
+        .fondo_futbol .header_nav .header_navbar_list li a {
+          background-color: transparent;
+          font-size: 20px; }
+          .fondo_futbol .header_nav .header_navbar_list li a:hover {
+            background: none;
+            background-color: none; } }
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  background-color: black;
+  position: relative;
+  width: 100%;
+  min-width: 300px; }
+  .footer .footer_up_button {
+    background-color: rgba(0, 182, 118, 0.8);
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    padding: 10px 13px 10px 13px;
+    transition: 0.2s;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    right: 10px; }
+    .footer .footer_up_button:hover {
+      background-color: rgba(0, 182, 118, 0.8);
+      transition: 0, 2s; }
+  .footer .footer_list li {
+    display: inline-block;
+    margin: 30px 50px 15px 50px !important;
+    text-decoration: none;
+    list-style-type: none; }
+  .footer .footer_list_cel {
+    display: none; }
+  .footer p {
+    margin-bottom: 10px;
+    display: inline-block;
+    color: grey;
+    opacity: 0.6;
+    font-weight: bold; }
+  .footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold; }
+    .footer a:hover {
+      color: rgba(0, 182, 118, 0.8); }
+
+/* RESPONSIVE FOOTER */
+@media (max-width: 673px) {
+  .footer_list {
+    display: none; }
+  .footer_list_cel {
+    display: inline-block !important;
+    margin-top: 10px; }
+    .footer_list_cel a {
+      margin: 0px 20px; }
+  .fa-instagram {
+    margin: 30px 0px !important;
+    padding: 0 !important; }
+  .fa-twitter {
+    margin: 30px 0px !important;
+    padding: 0 !important; }
+  .fa-whatsapp {
+    margin: 30px 0px !important;
+    padding: 0 !important; } }
