@@ -1,6 +1,5 @@
 .section_instalaciones {
     display: flex;
-    background-color: rgb(0, 0, 0);
     flex-direction: column;
     width: 100%;
     height: fit-content;
@@ -9,7 +8,7 @@
     h3 {
         margin: 20px auto;
         font-size: 28px;
-        color: white;
+        color: rgb(0, 0, 0);
     }
 
     .div_foto_cancha {
@@ -23,7 +22,7 @@
         }
         p {
             margin: 50px 20px 0px 0px;
-            color: white;
+            color: rgb(0, 0, 0);
             font-weight: 600;
             line-height: 25px;
             text-align: justify;
@@ -42,7 +41,7 @@
         p {
             font-weight: 600;
             margin: 50px 0px 0px 20px;
-            color: white;
+            color: rgb(0, 0, 0);
             line-height: 25px;
             text-align: justify;
         }

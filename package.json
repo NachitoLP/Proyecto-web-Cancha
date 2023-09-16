@@ -1,16 +1,24 @@
 {
   "name": "webcancha",
   "version": "1.0.0",
-  "description": "",
+  "description": "<h1>¡EN ELABORACIÓN!</h1>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss public/scss/style.scss public/css/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NachitoLP/Proyecto-web-Cancha.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NachitoLP/Proyecto-web-Cancha/issues"
+  },
+  "homepage": "https://github.com/NachitoLP/Proyecto-web-Cancha#readme",
   "dependencies": {
     "node-sass": "^9.0.0",
     "nodemon": "^3.0.1"

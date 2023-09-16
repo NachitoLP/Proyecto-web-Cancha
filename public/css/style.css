@@ -12,86 +12,85 @@
     background-color: black; }
 
 /* VIEWS */
-.section_reservas {
-  display: flex;
-  width: 100%;
-  height: 500px;
-  background: #25b600;
-  background: linear-gradient(0deg, rgba(0, 182, 118, 0.8) 27%, rgba(0, 182, 118, 0.5) 71%, rgba(255, 255, 255, 0) 94%); }
-  .section_reservas .div_conocenos {
-    width: 75%;
-    height: 100%;
-    margin: auto;
+.section_reserva_instalaciones {
+  background: linear-gradient(0deg, #00b676 45%, rgba(0, 182, 118, 0.7) 80%, rgba(255, 255, 255, 0) 100%); }
+  .section_reserva_instalaciones .section_reservas {
     display: flex;
-    flex-wrap: wrap; }
-    .section_reservas .div_conocenos .div_form_reservar {
-      margin: auto 10px;
-      width: 40%;
-      padding-right: 10px; }
-      .section_reservas .div_conocenos .div_form_reservar div {
-        width: 100%; }
-        .section_reservas .div_conocenos .div_form_reservar div label {
-          display: block;
-          font-weight: 600;
-          margin-left: 10px; }
-        .section_reservas .div_conocenos .div_form_reservar div input, .section_reservas .div_conocenos .div_form_reservar div select {
-          width: 100%;
-          height: 40px;
-          display: block;
-          border-radius: 20px;
-          border: none;
-          transition: 0.3s;
-          margin-bottom: 15px; }
-          .section_reservas .div_conocenos .div_form_reservar div input::placeholder, .section_reservas .div_conocenos .div_form_reservar div select::placeholder {
-            color: black;
-            padding-left: 10px; }
-      .section_reservas .div_conocenos .div_form_reservar #button_reservar {
-        color: white;
-        font-weight: bold;
-        text-decoration: none;
-        list-style: none;
-        transition: 0.3s;
-        font-size: 18px;
-        background-color: #08663f;
-        border-radius: 10px;
-        border: none;
-        padding: 10px 20px;
-        margin: 20px auto;
-        display: block; }
-        .section_reservas .div_conocenos .div_form_reservar #button_reservar:hover {
-          background-color: black;
-          transition: 0.3s;
-          color: white; }
-      .section_reservas .div_conocenos .div_form_reservar #input_type_date, .section_reservas .div_conocenos .div_form_reservar div select {
-        padding: 10px; }
-    .section_reservas .div_conocenos .div_conocenos_texto {
+    width: 100%;
+    height: 600px; }
+    .section_reserva_instalaciones .section_reservas .div_conocenos {
+      width: 75%;
+      height: 100%;
       margin: auto;
-      width: 50%;
-      margin-left: 70px; }
-      .section_reservas .div_conocenos .div_conocenos_texto h3 {
-        font-size: 40px;
-        font-weight: bolder; }
-      .section_reservas .div_conocenos .div_conocenos_texto p {
-        font-size: 24px;
-        color: black;
-        width: 80%; }
-  .section_reservas .div_informacion_util {
-    width: 25%;
-    margin: auto 40px;
-    border-left: 2px solid black;
-    padding-left: 20px; }
-    .section_reservas .div_informacion_util h3 {
-      font-size: 30px;
-      text-align: center;
-      margin-bottom: 40px; }
-    .section_reservas .div_informacion_util p {
-      font-size: 18px;
-      text-align: justify;
-      font-weight: 600; }
+      display: flex;
+      flex-wrap: wrap; }
+      .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar {
+        margin: auto 10px;
+        width: 40%;
+        padding-right: 10px; }
+        .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div {
+          width: 100%; }
+          .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div label {
+            display: block;
+            font-weight: 600;
+            margin-left: 10px; }
+          .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div input, .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div select {
+            width: 100%;
+            height: 40px;
+            display: block;
+            border-radius: 20px;
+            border: none;
+            transition: 0.3s;
+            margin-bottom: 15px; }
+            .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div input::placeholder, .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div select::placeholder {
+              color: black;
+              padding-left: 10px; }
+        .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar #button_reservar {
+          color: white;
+          font-weight: bold;
+          text-decoration: none;
+          list-style: none;
+          transition: 0.3s;
+          font-size: 18px;
+          background-color: #08663f;
+          border-radius: 10px;
+          border: none;
+          padding: 10px 20px;
+          margin: 20px auto;
+          display: block; }
+          .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar #button_reservar:hover {
+            background-color: black;
+            transition: 0.3s;
+            color: white; }
+        .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar #input_type_date, .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div select {
+          padding: 10px; }
+      .section_reserva_instalaciones .section_reservas .div_conocenos .div_conocenos_texto {
+        margin: auto;
+        width: 50%;
+        margin-left: 70px; }
+        .section_reserva_instalaciones .section_reservas .div_conocenos .div_conocenos_texto h3 {
+          font-size: 40px;
+          font-weight: bolder; }
+        .section_reserva_instalaciones .section_reservas .div_conocenos .div_conocenos_texto p {
+          font-size: 24px;
+          color: black;
+          width: 80%; }
+    .section_reserva_instalaciones .section_reservas .div_informacion_util {
+      width: 25%;
+      margin: auto 40px;
+      border-left: 2px solid black;
+      padding-left: 20px; }
+      .section_reserva_instalaciones .section_reservas .div_informacion_util h3 {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 40px; }
+      .section_reserva_instalaciones .section_reservas .div_informacion_util p {
+        font-size: 18px;
+        text-align: justify;
+        font-weight: 600; }
 
 .section_instalaciones {
   display: flex;
-  background-color: black;
   flex-direction: column;
   width: 100%;
   height: fit-content;
@@ -99,7 +98,7 @@
   .section_instalaciones h3 {
     margin: 20px auto;
     font-size: 28px;
-    color: white; }
+    color: black; }
   .section_instalaciones .div_foto_cancha {
     display: flex;
     justify-content: flex-start;
@@ -109,7 +108,7 @@
       margin: 0px 20px; }
     .section_instalaciones .div_foto_cancha p {
       margin: 50px 20px 0px 0px;
-      color: white;
+      color: black;
       font-weight: 600;
       line-height: 25px;
       text-align: justify; }
@@ -123,7 +122,7 @@
     .section_instalaciones .div_foto_bufete p {
       font-weight: 600;
       margin: 50px 0px 0px 20px;
-      color: white;
+      color: black;
       line-height: 25px;
       text-align: justify; }
 

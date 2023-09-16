@@ -65,67 +65,81 @@
                     </div>
                 </nav>
             </header>
-            <section class="section_reservas">
-                <div class="div_conocenos">
-                    <div class="div_conocenos_texto">
-                        <h3>Reservá tu cancha al instante</h3>
-                        <p>Vení a conocer nuestro espacio y a jugar fútbol en nuestra cancha.</p>
+            <section class="section_reserva_instalaciones">
+                <section class="section_reservas">
+                    <div class="div_conocenos">
+                        <div class="div_conocenos_texto">
+                            <h3>Reservá tu cancha al instante</h3>
+                            <p>Vení a conocer nuestro espacio y a jugar fútbol en nuestra cancha.</p>
+                        </div>
+                        <div class="div_form_reservar">
+                            <form action="">
+                                <div>
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" name="nombre" placeholder="Escribí tu nombre...">
+                                </div>
+                                <div>
+                                    <label for="apellido">Apellido</label>
+                                    <input type="text" name="apellido" placeholder="Escribí tu apellido...">
+                                </div>
+                                <div>
+                                    <label for="dia">Seleccioná un día</label>
+                                    <input type="date" name="dia" id="input_type_date">
+                                </div>
+                                <div>
+                                    <label for="horario">Seleccioná un horario</label>
+                                    <select name="horario" id="select_horario">
+                                        <option value="default">-</option>
+                                        <option value="13hs">13:00</option>
+                                        <option value="14hs">14:00</option>
+                                        <option value="15hs">15:00</option>
+                                        <option value="16hs">16:00</option>
+                                        <option value="17hs">17:00</option>
+                                        <option value="18hs">18:00</option>
+                                        <option value="19hs">19:00</option>
+                                        <option value="20hs">20:00</option>
+                                        <option value="21hs">21:00</option>
+                                        <option value="22hs">22:00</option>
+                                        <option value="23hs">23:00</option>
+                                    </select>
+                                </div>
+                                <input type="submit" value="Reservar" id="button_reservar">
+                            </form>
+                        </div>
                     </div>
-                    <div class="div_form_reservar">
-                        <form action="">
-                            <div>
-                                <label for="nombre">Nombre</label>
-                                <input type="text" name="nombre" placeholder="Escribí tu nombre...">
-                            </div>
-                            <div>
-                                <label for="apellido">Apellido</label>
-                                <input type="text" name="apellido" placeholder="Escribí tu apellido...">
-                            </div>
-                            <div>
-                                <label for="dia">Seleccioná un día</label>
-                                <input type="date" name="dia" id="input_type_date">
-                            </div>
-                            <div>
-                                <label for="horario">Seleccioná un horario</label>
-                                <select name="horario" id="select_horario">
-                                    <option value="default">-</option>
-                                    <option value="13hs">13:00</option>
-                                    <option value="14hs">14:00</option>
-                                    <option value="15hs">15:00</option>
-                                    <option value="16hs">16:00</option>
-                                    <option value="17hs">17:00</option>
-                                    <option value="18hs">18:00</option>
-                                    <option value="19hs">19:00</option>
-                                    <option value="20hs">20:00</option>
-                                    <option value="21hs">21:00</option>
-                                    <option value="22hs">22:00</option>
-                                    <option value="23hs">23:00</option>
-                                </select>
-                            </div>
-                            <input type="submit" value="Reservar" id="button_reservar">
-                        </form>
+                    <div class="div_informacion_util">
+                        <h3>Información útil</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, molestias magni exercitationem quis eius ullam itaque at praesentium, ipsam blanditiis deserunt consectetur eaque possimus ex ducimus dignissimos. In, nemo quos! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos officia quas ducimus quasi quia eveniet? Cupiditate ex ipsa neque doloribus aliquid et? Natus doloribus, ut veritatis adipisci dolore nemo corrupti!</p>
                     </div>
-                </div>
-                <div class="div_informacion_util">
-                    <h3>Información útil</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, molestias magni exercitationem quis eius ullam itaque at praesentium, ipsam blanditiis deserunt consectetur eaque possimus ex ducimus dignissimos. In, nemo quos! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos officia quas ducimus quasi quia eveniet? Cupiditate ex ipsa neque doloribus aliquid et? Natus doloribus, ut veritatis adipisci dolore nemo corrupti!</p>
-                </div>
+                </section>
+                <section class="section_instalaciones">
+                    <h3>Nuestras instalaciones</h3>
+                    <div class="div_foto_cancha">
+                        <img src="{% static 'images/foto_cancha.jpg' %}" alt="Foto de la cancha." class="animate__animated animate__zoomInLeft">
+                        <p class="animate__animated animate__backInRight">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate id facilis eum consequuntur fugiat quas, iure quod minima sint nobis consequatur ratione, modi tenetur neque dignissimos illo vel itaque a?
+                        Eius distinctio architecto dolores doloribus expedita provident ut ipsa numquam officiis dolor quod vero quidem esse, earum similique impedit eveniet quisquam autem fuga dolorum! Similique reiciendis ipsa eos nulla pariatur.
+                        Vero velit libero, obcaecati ducimus doloremque dignissimos nemo sunt, veniam laboriosam reprehenderit quod earum provident sequi magni natus a fuga voluptatibus rem perferendis itaque perspiciatis minima est! Quisquam, magni aliquam?</p>
+                    </div>
+                    <div class="div_foto_bufete">
+                        <p class="animate__animated animate__backInLeft">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate id facilis eum consequuntur fugiat quas, iure quod minima sint nobis consequatur ratione, modi tenetur neque dignissimos illo vel itaque a?
+                        Eius distinctio architecto dolores doloribus expedita provident ut ipsa numquam officiis dolor quod vero quidem esse, earum similique impedit eveniet quisquam autem fuga dolorum! Similique reiciendis ipsa eos nulla pariatur.
+                        Vero velit libero, obcaecati ducimus doloremque dignissimos nemo sunt, veniam laboriosam reprehenderit quod earum provident sequi magni natus a fuga voluptatibus rem perferendis itaque perspiciatis minima est! Quisquam, magni aliquam?</p>
+                        <img src="{% static 'images/foto_bufete.jpg' %}" alt="Foto del bufete." class="animate__animated animate__zoomInRight">
+                    </div>
+                </section>
             </section>
         </div>
     </section>
-    <section class="section_instalaciones">
-        <h3>Nuestras instalaciones</h3>
-        <div class="div_foto_cancha">
-            <img src="{% static 'images/foto_cancha.jpg' %}" alt="Foto de la cancha.">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate id facilis eum consequuntur fugiat quas, iure quod minima sint nobis consequatur ratione, modi tenetur neque dignissimos illo vel itaque a?
-            Eius distinctio architecto dolores doloribus expedita provident ut ipsa numquam officiis dolor quod vero quidem esse, earum similique impedit eveniet quisquam autem fuga dolorum! Similique reiciendis ipsa eos nulla pariatur.
-            Vero velit libero, obcaecati ducimus doloremque dignissimos nemo sunt, veniam laboriosam reprehenderit quod earum provident sequi magni natus a fuga voluptatibus rem perferendis itaque perspiciatis minima est! Quisquam, magni aliquam?</p>
+    <section class="section_contacto">
+        <h3>Contacto</h3>
+        <div>
+
         </div>
-        <div class="div_foto_bufete">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate id facilis eum consequuntur fugiat quas, iure quod minima sint nobis consequatur ratione, modi tenetur neque dignissimos illo vel itaque a?
-            Eius distinctio architecto dolores doloribus expedita provident ut ipsa numquam officiis dolor quod vero quidem esse, earum similique impedit eveniet quisquam autem fuga dolorum! Similique reiciendis ipsa eos nulla pariatur.
-            Vero velit libero, obcaecati ducimus doloremque dignissimos nemo sunt, veniam laboriosam reprehenderit quod earum provident sequi magni natus a fuga voluptatibus rem perferendis itaque perspiciatis minima est! Quisquam, magni aliquam?</p>
-            <img src="{% static 'images/foto_bufete.jpg' %}" alt="Foto del bufete.">
+        <div>
+
+        </div>
+        <div>
+
         </div>
     </section>
     <footer class="footer">
