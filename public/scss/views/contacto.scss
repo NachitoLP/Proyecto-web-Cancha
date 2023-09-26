@@ -1,0 +1,69 @@
+.section_contacto{
+    background-color: black;
+
+    .titulo_contacto{
+        margin: auto;
+        padding-top: 10px;
+        color: white;
+        text-align: center;
+    }
+    .containers_contacto{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .container_consulta{
+            width: 50%;
+            h3{
+                color: white;
+                text-align: center;
+            }
+            h5{
+                color: white;
+                font-size: 20px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .form_contacto_consulta{
+                display: flex;
+                flex-direction: column;
+
+                input{
+                    width: 60%;
+                    margin: auto;
+                    margin-bottom: 15px;
+                    text-align: center;
+                    color: black;
+                    font-weight: 600;
+                    
+                    &::placeholder{
+                        text-align: center;
+                        color: black;
+                        font-weight: 500;
+                    }
+                }
+                label{
+                    margin: auto;
+                    color: white;
+                    text-align: center;
+                }
+                textarea{
+                    width: 60%;
+                    padding: 10px;
+                    margin: auto;
+                    color: black;
+                    font-weight: 600;
+                    &::placeholder{
+                        text-align: center;
+                        color: black;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        .container_preguntas_frecuentes{
+            width: 50%;
+        }
+    }
+
+}
