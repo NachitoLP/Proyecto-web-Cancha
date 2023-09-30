@@ -22,7 +22,6 @@
         width: 100%;
         min-width: 300px;
         display: flex;
-        justify-content: center;
     
         .btn_check {
             font-size: 30px;
@@ -38,78 +37,29 @@
             display: none;
         }
     
-        .company_name_title{
-            a{
-                text-decoration: none;
-                color: rgb(255, 255, 255);
-                ::after{
-                    color: rgb(2, 64, 0);
-                }
-            }
-            h2{
-                text-align: center;
-                margin-left: 20px;
-                line-height: 70px;
-                position: absolute;
-                font-weight: bold;
-                left: 0px;
-            }
-        }
-        
-        .icons_header_login {
-            position: absolute;
-            right: 0px;
-            display: flex;
-            margin: 10px 15px;
-    
-            a {
-                margin: 0px 15px;
-    
-                div {
-                    color: white;
-                    height: fit-content;
-                    font-weight: bold;
-                    transition: 0.3s;
-                    
-                    &:hover {
-                        color: rgb(0, 0, 0);
-                        transition: 0.3s;
-                    }
-                    span {
-                        display: block;
-                        text-align: center;
-                    }
-                }
-            }
-        }
-
-        .header_navbar_list_cel {
-            display: none;
-        }
-    
         .header_navbar_list {
             display: flex;
-            width: 40%;
-            justify-content: space-between !important;
+            width: 100%;
+            justify-content: flex-start !important;
             text-align: center;
             line-height: 70px;
     
             li {
-                margin: 0px 0px;
+                margin: 0px 15px;
     
                 a {
-                    color: white;
-                    font-weight: bold;
+                    font-weight: 900;
                     text-decoration: none;
                     list-style: none;
                     transition: 0.3s;
-                    background-color: $color-primary-rgb;
-                    border-radius: 20px;
-                    padding: 10px 20px;
-    
-                    &:hover {
-                        background-color: rgb(0, 0, 0);
-                        transition: 0.3s;
+                    color: rgb(0, 0, 0);
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+
+                    i{
+                        color: black;
                     }
                 }
             }
@@ -119,54 +69,6 @@
 
 
 /* NAV RESPONSIVE */
-
-@media(max-width:1200px) {
-    .header_nav {
-        .company_name_title {
-            display: none;
-        }
-        .header_navbar_list {
-            display: none !important;
-        }
-        .header_navbar_list_cel {
-            display: flex !important;
-            width: 40%;
-            justify-content: space-between !important;
-            text-align: center;
-    
-            li {
-                margin: 0px 0px;
-
-                .container_icons_1200px{
-                    color: black;
-                    font-weight: bold;
-                    text-decoration: none;
-                    list-style: none;
-                    transition: 0.3s;
-                    display: flex;
-                    flex-direction: column;
-                    margin: 0px;
-
-                    i{
-                        padding: 0px;
-                        margin-top: 20px;
-                        margin-bottom: 5px;
-                        color:black;
-                    }
-                    label{
-                        padding: 0px;
-                        margin: 0px;
-                    }
-    
-                    &:hover {
-                        background-color: rgb(0, 0, 0);
-                        transition: 0.3s;
-                    }
-                }
-            }
-        }
-    }
-}
 
 @media(max-width:798px) {
     .fondo_futbol{
@@ -183,10 +85,6 @@
     
             #check:checked~.header_navbar_list {
                 left: 0;
-            }
-
-            .header_navbar_list_cel {
-                display: none !important;
             }
             
             .header_navbar_list {
@@ -211,7 +109,7 @@
                     a {
                         background-color: transparent;
                         font-size: 20px;
-    
+                        
                         &:hover {
                             background: none;
                             background-color: none;

@@ -24,3 +24,35 @@
 #up_arrow {
     margin: 0;
 }
+
+.icons_header_login {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    margin: 10px 15px;
+
+    a {
+        margin: 0px 15px;
+
+        div {
+            color: rgb(0, 0, 0);
+            height: fit-content;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            
+            &:hover {
+                label{
+                    cursor:pointer;
+                }
+                span{
+                    text-decoration: underline;
+                }
+            }
+            
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+}

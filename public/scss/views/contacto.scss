@@ -1,9 +1,10 @@
 .section_contacto{
     background-color: black;
+    min-height:560px;
 
     .titulo_contacto{
         margin: auto;
-        padding-top: 10px;
+        padding: 10px 0px;
         color: white;
         text-align: center;
     }
@@ -27,7 +28,7 @@
             .form_contacto_consulta{
                 display: flex;
                 flex-direction: column;
-
+                
                 input{
                     width: 60%;
                     margin: auto;
@@ -63,6 +64,31 @@
         }
         .container_preguntas_frecuentes{
             width: 50%;
+            
+            h3 {
+                color: white;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .accordion {
+                width: 500px;
+                margin: auto;
+
+                
+                .accordion-item{
+                    margin-bottom: 20px;
+                    background-color: transparent;
+                    color: white;
+
+                    .accordion-button {
+                        background-color: transparent;
+                        color: white;
+                    }
+                    .accordion-header {
+                        color: white;
+                    }
+                }
+            }
         }
     }
 
