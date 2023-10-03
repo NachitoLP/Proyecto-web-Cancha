@@ -6,7 +6,7 @@
     position: relative;
     width: 100%;
     min-width: 300px;
-
+    
     .footer_up_button {
         background-color: rgb(0, 0, 0);
         border-top-left-radius: 150px;
@@ -17,7 +17,7 @@
         bottom: 0;
         z-index: 1;
         right: 10px;
-    
+        
         &:hover {
             background-color: $color-primary;
             transition: 0, 2s;
