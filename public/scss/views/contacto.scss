@@ -1,18 +1,19 @@
 .section_contacto{
     background-color: black;
-    min-height:560px;
+    min-height:600px;
 
     .titulo_contacto{
         margin: auto;
+        margin-bottom: 20px;
         padding: 10px 0px;
         color: white;
         text-align: center;
     }
     .containers_contacto{
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap !important;
         justify-content: space-evenly;
-
+        
         .container_consulta{
             width: 50%;
             h3{
@@ -31,6 +32,9 @@
                 
                 input{
                     width: 60%;
+                    height: 40px;
+                    border-radius: 20px;
+                    border: none;
                     margin: auto;
                     margin-bottom: 15px;
                     text-align: center;
@@ -46,11 +50,12 @@
                 label{
                     margin: auto;
                     color: white;
-                    text-align: center;
                 }
                 textarea{
                     width: 60%;
                     padding: 10px;
+                    border-radius: 20px;
+                    border: none;
                     margin: auto;
                     color: black;
                     font-weight: 600;
@@ -66,30 +71,59 @@
             width: 50%;
             
             h3 {
+                text-transform: capitalize;
                 color: white;
                 text-align: center;
-                margin-bottom: 20px;
+                margin-bottom: 50px;
             }
             .accordion {
-                width: 500px;
+                width: 600px;
                 margin: auto;
+                text-align: justify;
 
-                
                 .accordion-item{
                     margin-bottom: 20px;
-                    background-color: transparent;
                     color: white;
+                    border: none;
+                    background-color: transparent;
 
-                    .accordion-button {
-                        background-color: transparent;
-                        color: white;
-                    }
                     .accordion-header {
                         color: white;
+
+                        .accordion-button {
+                            color: white;
+                            border-radius: 0px;
+                            font-size: 18px;
+                            
+                            &:hover{
+                                color: $color-primary;
+                            }
+                            
+                            &:focus{
+                                box-shadow: none;
+                            }
+                        }
+                        
+                        .accordion-button:not(.collapsed){
+                            background-color: transparent;
+                            box-shadow: none;
+                            border-bottom: 1px solid $color-primary;
+    
+                            &::after{
+                                background-image: unset;
+                            }
+                        }
+                        .accordion-button:is(.collapsed){
+                            background-color: transparent;
+                            border-left: 1px solid $color-primary;
+
+                            &::after{
+                                background-image: unset;
+                            }
+                        }
                     }
                 }
             }
         }
     }
-
 }

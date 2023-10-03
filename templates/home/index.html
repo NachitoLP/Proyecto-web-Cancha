@@ -44,7 +44,7 @@
                 </nav>
             </header>
             <section class="section_reserva_instalaciones">
-                <section class="section_reservas">
+                <section class="section_reservas" id="inicio">
                     <div class="div_conocenos">
                         <div class="div_conocenos_texto">
                             <h3>Reservá tu cancha al instante</h3>
@@ -86,12 +86,12 @@
                         </div>
                     </div>
                     <div class="div_informacion_util">
-                        <h3>Información útil</h3>
+                        <h3>Información Útil</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, molestias magni exercitationem quis eius ullam itaque at praesentium, ipsam blanditiis deserunt consectetur eaque possimus ex ducimus dignissimos. In, nemo quos! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos officia quas ducimus quasi quia eveniet? Cupiditate ex ipsa neque doloribus aliquid et? Natus doloribus, ut veritatis adipisci dolore nemo corrupti!</p>
                     </div>
                 </section>
-                <section class="section_instalaciones">
-                    <h2>Nuestras instalaciones</h2>
+                <section class="section_instalaciones" id="instalaciones">
+                    <h2>Nuestras Instalaciones</h2>
                     <div class="div_foto_cancha">
                         <img src="{% static 'images/foto_cancha.jpg' %}" alt="Foto de la cancha." class="animate__animated animate__zoomInLeft">
                         <p class="animate__animated animate__backInRight">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate id facilis eum consequuntur fugiat quas, iure quod minima sint nobis consequatur ratione, modi tenetur neque dignissimos illo vel itaque a?
@@ -108,7 +108,7 @@
             </section>
         </div>
     </section>
-    <section class="section_contacto">
+    <section class="section_contacto" id="contacto">
         <h2 class="titulo_contacto">Contacto</h2>
         <div class="containers_contacto">
             <div class="container_consulta">
@@ -120,7 +120,7 @@
                     <label for="correo_contacto">Correo de contacto:</label>
                     <input type="text" name="correo_contacto" placeholder="Ingresá un correo de contacto...">
                     <label for="consulta_contacto">Dejá tu consulta</label>
-                    <textarea name="consulta_contacto" cols="50" rows="5" style="resize: none;"></textarea>
+                    <textarea name="consulta_contacto" minlength="5" maxlength="300" cols="50" rows="5" style="resize: none;"></textarea>
                 </form>
             </div>
             <div class="container_preguntas_frecuentes">
@@ -128,9 +128,9 @@
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Accordion Item #1
-                        </button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Pregunta frecuente #1
+                            </button>
                         </h2>
                         <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
@@ -138,9 +138,9 @@
                     </div>
                         <div class="accordion-item">
                         <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Accordion Item #2
-                        </button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                Pregunta frecuente #2
+                            </button>
                         </h2>
                         <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
@@ -148,9 +148,9 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            Accordion Item #3
-                        </button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                Pregunta frecuente #3
+                            </button>
                         </h2>
                         <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content.</div>
@@ -158,9 +158,9 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                            Accordion Item #4
-                        </button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                Pregunta frecuente #4
+                            </button>
                         </h2>
                         <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content.</div>
@@ -171,7 +171,7 @@
         </div>
     </section>
     <footer class="footer">
-        <a href="#arriba" class="footer_up_button"><i class="fa-solid fa-arrow-up fa-2x1" id="up_arrow"></i></a>  
+        <!-- <a href="#arriba" class="footer_up_button"><i class="fa-solid fa-arrow-up fa-2x1" id="up_arrow"></i></a>   -->
         <div>         
             <ul class="footer_list">
                 <li><a href="#" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl"></i>WhatsApp</a></li>

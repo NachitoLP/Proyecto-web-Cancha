@@ -1,4 +1,8 @@
 from pathlib import Path
+import json
+
+with open("secrets.json") as f:
+    secrets = json.load(f)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -7,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-i0n&$uz4gf(nawukhrdo6kc2=%(@kyvxftl*ksinuf2ocybm71'
+SECRET_KEY = secrets["SECRET_KEY"]
 
 # # Application definition
 INSTALLED_APPS = [

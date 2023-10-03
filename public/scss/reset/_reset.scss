@@ -5,12 +5,12 @@
     list-style: none;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-
+    
     &::selection {
         color: $color-primary;
         background-color: rgb(0, 0, 0);
     }
-
+    
     a{
         text-decoration: none;
     }

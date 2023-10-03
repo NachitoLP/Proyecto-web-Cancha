@@ -1,5 +1,6 @@
 /* VARIABLES */
 /* RESET */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 * {
   padding: 0;
   margin: 0;
@@ -17,6 +18,7 @@
 .section_reserva_instalaciones {
   background: linear-gradient(0deg, #00b676 45%, rgba(0, 182, 118, 0.7) 80%, rgba(255, 255, 255, 0) 100%); }
   .section_reserva_instalaciones .section_reservas {
+    background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     width: 100%;
     height: 600px; }
@@ -35,7 +37,8 @@
           .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div label {
             display: block;
             font-weight: 600;
-            margin-left: 10px; }
+            margin-left: 10px;
+            color: white; }
           .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div input, .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div select {
             width: 100%;
             height: 40px;
@@ -48,11 +51,10 @@
             font-weight: 600; }
             .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div input::placeholder, .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div select::placeholder {
               color: black;
-              padding-left: 5px;
+              padding: 5px;
               font-weight: 500; }
-          .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div select::placeholder {
-            color: black;
-            font-weight: 500 !important; }
+          .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div select {
+            padding: 0px 10px; }
         .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar #button_reservar {
           color: white;
           font-weight: bold;
@@ -70,7 +72,7 @@
             background-color: black;
             transition: 0.3s;
             color: white; }
-        .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar #input_type_date, .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div select {
+        .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar #input_type_date {
           padding: 10px; }
       .section_reserva_instalaciones .section_reservas .div_conocenos .div_conocenos_texto {
         margin: auto;
@@ -78,10 +80,11 @@
         margin-left: 70px; }
         .section_reserva_instalaciones .section_reservas .div_conocenos .div_conocenos_texto h3 {
           font-size: 40px;
-          font-weight: bolder; }
+          font-weight: bolder;
+          color: white; }
         .section_reserva_instalaciones .section_reservas .div_conocenos .div_conocenos_texto p {
           font-size: 24px;
-          color: black;
+          color: white;
           width: 80%; }
     .section_reserva_instalaciones .section_reservas .div_informacion_util {
       width: 25%;
@@ -91,23 +94,186 @@
       .section_reserva_instalaciones .section_reservas .div_informacion_util h3 {
         font-size: 30px;
         font-weight: 600;
+        color: black;
         text-align: center;
         margin-bottom: 40px; }
       .section_reserva_instalaciones .section_reservas .div_informacion_util p {
         font-size: 18px;
         text-align: justify;
-        font-weight: 600; }
+        color: black;
+        font-weight: 500; }
+
+.body_login {
+  background: #f6f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  margin: -20px 0 50px; }
+  .body_login h1 {
+    font-weight: bold;
+    margin: 0; }
+  .body_login h2 {
+    text-align: center; }
+  .body_login p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px; }
+  .body_login span {
+    font-size: 12px; }
+  .body_login a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0; }
+  .body_login button {
+    border-radius: 20px;
+    border: 1px solid #FF4B2B;
+    background-color: #FF4B2B;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in; }
+  .body_login button:active {
+    transform: scale(0.95); }
+  .body_login button:focus {
+    outline: none; }
+  .body_login button.ghost {
+    background-color: transparent;
+    border-color: #FFFFFF; }
+  .body_login form {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center; }
+  .body_login input, .body_login .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div select, .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div .body_login select {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%; }
+  .body_login .container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px; }
+  .body_login .form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out; }
+  .body_login .sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2; }
+  .body_login .container.right-panel-active .sign-in-container {
+    transform: translateX(100%); }
+  .body_login .sign-up-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1; }
+  .body_login .container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s; }
+
+@keyframes show {
+  0%, 49.99% {
+    opacity: 0;
+    z-index: 1; }
+  50%, 100% {
+    opacity: 1;
+    z-index: 5; } }
+  .body_login .overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100; }
+  .body_login .container.right-panel-active .overlay-container {
+    transform: translateX(-100%); }
+  .body_login .overlay {
+    background: #FF416C;
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #FFFFFF;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out; }
+  .body_login .container.right-panel-active .overlay {
+    transform: translateX(50%); }
+  .body_login .overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out; }
+  .body_login .overlay-left {
+    transform: translateX(-20%); }
+  .body_login .container.right-panel-active .overlay-left {
+    transform: translateX(0); }
+  .body_login .overlay-right {
+    right: 0;
+    transform: translateX(0); }
+  .body_login .container.right-panel-active .overlay-right {
+    transform: translateX(20%); }
+  .body_login .social-container {
+    margin: 20px 0; }
+    .body_login .social-container a {
+      border: 1px solid #DDDDDD;
+      border-radius: 50%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 5px;
+      height: 40px;
+      width: 40px; }
 
 .section_instalaciones {
   display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
   flex-direction: column;
   width: 100%;
   height: fit-content;
   margin: auto; }
   .section_instalaciones h2 {
-    margin: 20px auto;
+    margin: 30px auto 50px;
+    font-weight: bolder;
     font-size: 28px;
-    color: black; }
+    color: white; }
   .section_instalaciones .div_foto_cancha {
     display: flex;
     justify-content: flex-start;
@@ -117,8 +283,8 @@
       margin: 0px 20px; }
     .section_instalaciones .div_foto_cancha p {
       margin: 50px 20px 0px 0px;
-      color: black;
-      font-weight: 600;
+      color: white;
+      font-weight: 500;
       line-height: 25px;
       text-align: justify; }
   .section_instalaciones .div_foto_bufete {
@@ -129,23 +295,24 @@
       width: 30%;
       margin: 0px 20px; }
     .section_instalaciones .div_foto_bufete p {
-      font-weight: 600;
+      font-weight: 500;
       margin: 50px 0px 0px 20px;
-      color: black;
+      color: white;
       line-height: 25px;
       text-align: justify; }
 
 .section_contacto {
   background-color: black;
-  min-height: 560px; }
+  min-height: 600px; }
   .section_contacto .titulo_contacto {
     margin: auto;
+    margin-bottom: 20px;
     padding: 10px 0px;
     color: white;
     text-align: center; }
   .section_contacto .containers_contacto {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
     justify-content: space-evenly; }
     .section_contacto .containers_contacto .container_consulta {
       width: 50%; }
@@ -162,6 +329,9 @@
         flex-direction: column; }
         .section_contacto .containers_contacto .container_consulta .form_contacto_consulta input, .section_contacto .containers_contacto .container_consulta .form_contacto_consulta .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div select, .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div .section_contacto .containers_contacto .container_consulta .form_contacto_consulta select {
           width: 60%;
+          height: 40px;
+          border-radius: 20px;
+          border: none;
           margin: auto;
           margin-bottom: 15px;
           text-align: center;
@@ -173,11 +343,12 @@
             font-weight: 500; }
         .section_contacto .containers_contacto .container_consulta .form_contacto_consulta label {
           margin: auto;
-          color: white;
-          text-align: center; }
+          color: white; }
         .section_contacto .containers_contacto .container_consulta .form_contacto_consulta textarea {
           width: 60%;
           padding: 10px;
+          border-radius: 20px;
+          border: none;
           margin: auto;
           color: black;
           font-weight: 600; }
@@ -188,21 +359,40 @@
     .section_contacto .containers_contacto .container_preguntas_frecuentes {
       width: 50%; }
       .section_contacto .containers_contacto .container_preguntas_frecuentes h3 {
+        text-transform: capitalize;
         color: white;
         text-align: center;
-        margin-bottom: 20px; }
+        margin-bottom: 50px; }
       .section_contacto .containers_contacto .container_preguntas_frecuentes .accordion {
-        width: 500px;
-        margin: auto; }
+        width: 600px;
+        margin: auto;
+        text-align: justify; }
         .section_contacto .containers_contacto .container_preguntas_frecuentes .accordion .accordion-item {
           margin-bottom: 20px;
-          background-color: transparent;
-          color: white; }
-          .section_contacto .containers_contacto .container_preguntas_frecuentes .accordion .accordion-item .accordion-button {
-            background-color: transparent;
-            color: white; }
+          color: white;
+          border: none;
+          background-color: transparent; }
           .section_contacto .containers_contacto .container_preguntas_frecuentes .accordion .accordion-item .accordion-header {
             color: white; }
+            .section_contacto .containers_contacto .container_preguntas_frecuentes .accordion .accordion-item .accordion-header .accordion-button {
+              color: white;
+              border-radius: 0px;
+              font-size: 18px; }
+              .section_contacto .containers_contacto .container_preguntas_frecuentes .accordion .accordion-item .accordion-header .accordion-button:hover {
+                color: rgba(0, 182, 118, 0.8); }
+              .section_contacto .containers_contacto .container_preguntas_frecuentes .accordion .accordion-item .accordion-header .accordion-button:focus {
+                box-shadow: none; }
+            .section_contacto .containers_contacto .container_preguntas_frecuentes .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+              background-color: transparent;
+              box-shadow: none;
+              border-bottom: 1px solid rgba(0, 182, 118, 0.8); }
+              .section_contacto .containers_contacto .container_preguntas_frecuentes .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
+                background-image: unset; }
+            .section_contacto .containers_contacto .container_preguntas_frecuentes .accordion .accordion-item .accordion-header .accordion-button:is(.collapsed) {
+              background-color: transparent;
+              border-left: 1px solid rgba(0, 182, 118, 0.8); }
+              .section_contacto .containers_contacto .container_preguntas_frecuentes .accordion .accordion-item .accordion-header .accordion-button:is(.collapsed)::after {
+                background-image: unset; }
 
 /* COMPONENTES */
 /* ICONOS */
@@ -234,14 +424,12 @@
   .icons_header_login a {
     margin: 0px 15px; }
     .icons_header_login a div {
-      color: black;
+      color: white;
       height: fit-content;
       font-weight: bold;
       transition: all 0.3s ease-in-out; }
       .icons_header_login a div:hover label {
         cursor: pointer; }
-      .icons_header_login a div:hover span {
-        text-decoration: underline; }
       .icons_header_login a div span {
         display: block;
         text-align: center; }
@@ -261,7 +449,10 @@
   .section_header_y_reserva .div_header_y_reserva {
     position: relative; }
   .section_header_y_reserva .header_nav {
+    background-color: rgba(0, 0, 0, 0.605);
     height: 70px;
+    position: fixed;
+    z-index: 1;
     width: 100%;
     min-width: 300px;
     display: flex; }
@@ -288,11 +479,11 @@
           text-decoration: none;
           list-style: none;
           transition: 0.3s;
-          color: black; }
+          color: white; }
           .section_header_y_reserva .header_nav .header_navbar_list li a:hover {
             text-decoration: underline; }
           .section_header_y_reserva .header_nav .header_navbar_list li a i {
-            color: black; }
+            color: white; }
 
 /* NAV RESPONSIVE */
 @media (max-width: 798px) {

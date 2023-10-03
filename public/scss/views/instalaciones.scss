@@ -1,14 +1,16 @@
 .section_instalaciones {
     display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
     flex-direction: column;
     width: 100%;
     height: fit-content;
     margin: auto;
 
     h2 {
-        margin: 20px auto;
+        margin: 30px auto 50px;
+        font-weight: bolder;
         font-size: 28px;
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
     }
 
     .div_foto_cancha {
@@ -22,8 +24,8 @@
         }
         p {
             margin: 50px 20px 0px 0px;
-            color: rgb(0, 0, 0);
-            font-weight: 600;
+            color: rgb(255, 255, 255);
+            font-weight: 500;
             line-height: 25px;
             text-align: justify;
         }
@@ -39,9 +41,9 @@
             margin: 0px 20px;
         }
         p {
-            font-weight: 600;
+            font-weight: 500;
             margin: 50px 0px 0px 20px;
-            color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             line-height: 25px;
             text-align: justify;
         }
