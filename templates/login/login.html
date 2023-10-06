@@ -15,10 +15,16 @@
     <title>Página web</title>
 </head>
 <body class="body_login">
+    {% if error %}
+        <div class="body_login_error">
+            <p><strong>{{error}}</strong></p>
+        </div>
+    {% endif %}
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="#">
-                <h1>Sign Up</h1>
+            <form action="/sign-up/" method="POST">
+                {% csrf_token %}
+                <h2>Sign Up</h2>
                 <br>
                 <!-- <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -26,17 +32,19 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email for registration</span> -->
-                <input type="text" placeholder="Nombre" />
-                <input type="text" placeholder="Apellido" />
-                <input type="email" placeholder="Correo electrónico" />
-                <input type="password" placeholder="Contraseña" />
+                <input type="text" name="first_name" placeholder="Nombre" required/>
+                <input type="text" name="last_name" placeholder="Apellido" required/>
+                <input type="text" name="username" placeholder="Nombre de usuario" required/>
+                <input type="email" name="email" placeholder="Correo electrónico" required/>
+                <input type="password" name="password" placeholder="Contraseña" required/>
                 <br>
-                <button>Registrarse</button>
+                <button type="submit">Registrarse</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="#">
-                <h1>Sign In</h1>
+            <form action="/sign-in/" method="POST">
+                {% csrf_token %}
+                <h2>Sign In</h2>
                 <br>
                 <!-- <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -44,21 +52,21 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your account</span> -->
-                <input type="email" placeholder="Correo electrónico" />
-                <input type="password" placeholder="Contraseña" />
+                <input type="text" name="username" placeholder="Nombre de usuario" required/>
+                <input type="password" name="password" placeholder="Contraseña" required/>
                 <a href="#">¿Olvidaste tu contraseña?</a>
-                <button>Ingresar</button>
+                <button type="submit">Ingresar</button>
             </form>
         </div>
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-right">
-                    <h1>¡Hola!</h1>
+                    <h2>¡Hola!</h2>
                     <p>¿Sos nuevo? Ingresá tus datos para crear una cuenta.</p>
                     <button class="ghost" id="signUp">Registrarse</button>
                 </div>
                 <div class="overlay-panel overlay-left">
-                    <h1>¡Hola!</h1>
+                    <h2>¡Hola!</h2>
                     <p>¿Ya tenés una cuenta creada? Ingresá tus datos para acceder a tu cuenta.</p>
                     <button class="ghost" id="signIn">Ingresar</button>
                 </div>

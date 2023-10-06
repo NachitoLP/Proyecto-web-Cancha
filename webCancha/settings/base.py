@@ -15,6 +15,7 @@ SECRET_KEY = secrets["SECRET_KEY"]
 
 # # Application definition
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -24,8 +25,6 @@ INSTALLED_APPS = [
     
     #Local Apps
     'applications.home',
-    'applications.reservas',
-    'applications.usuarios',
 ]
 
 MIDDLEWARE = [

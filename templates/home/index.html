@@ -28,18 +28,21 @@
                         <li><a href="#contacto"><i class="fa-solid fa-circle-user list_icons"></i>Contacto</a></li>
                     </ul>
                     <div class="icons_header_login">
-                        <a href="/log-in">
+                        {% if not user.is_authenticated %}
+                        <a href="/sign-in">
                             <div class="nav_login">
                                 <span class="material-symbols-outlined">person</span>
                                 <label>Ingresar</label>
                             </div>
                         </a>
+                        {% else %}
                         <a href="/log-out">
                             <div class="nav_login">
                                 <span class="material-symbols-outlined">logout</span>
                                 <label>Salir</label>
                             </div>
                         </a>
+                        {% endif %}
                     </div>
                 </nav>
             </header>

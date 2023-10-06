@@ -112,10 +112,11 @@
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
   margin: -20px 0 50px; }
-  .body_login h1 {
-    font-weight: bold;
-    margin: 0; }
   .body_login h2 {
+    font-weight: bold;
+    margin: 0;
+    font-size: 40px; }
+  .body_login h3 {
     text-align: center; }
   .body_login p {
     font-size: 14px;
@@ -163,6 +164,20 @@
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%; }
+  .body_login .body_login_error {
+    background: #FF416C;
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    margin: 10px auto;
+    text-align: center;
+    width: fit-content;
+    height: 60px;
+    padding: 10px;
+    border-radius: 10px; }
+    .body_login .body_login_error p {
+      color: white;
+      line-height: 5px; }
   .body_login .container {
     background-color: #fff;
     border-radius: 10px;
@@ -171,7 +186,7 @@
     overflow: hidden;
     width: 768px;
     max-width: 100%;
-    min-height: 480px; }
+    min-height: 550px; }
   .body_login .form-container {
     position: absolute;
     top: 0;
