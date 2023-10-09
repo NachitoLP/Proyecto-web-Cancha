@@ -54,7 +54,8 @@
                             <p>Vení a conocer nuestro espacio y a jugar fútbol en nuestra cancha.</p>
                         </div>
                         <div class="div_form_reservar">
-                            <form action="">
+                            <form action="/reservar" method="POST">
+                                {% csrf_token %}
                                 <div>
                                     <label for="nombre">Nombre</label>
                                     <input type="text" name="nombre" placeholder="Escribí tu nombre...">
@@ -98,17 +99,17 @@
                     <div class="div_foto_cancha">
                         <img src="{% static 'images/foto_cancha.jpg' %}" alt="Foto de la cancha." class="animate__animated animate__zoomInLeft">
                         <p class="animate__animated animate__backInRight">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate id facilis eum consequuntur fugiat quas, iure quod minima sint nobis consequatur ratione, modi tenetur neque dignissimos illo vel itaque a?
-                        Eius distinctio architecto dolores doloribus expedita provident ut ipsa numquam officiis dolor quod vero quidem esse, earum similique impedit eveniet quisquam autem fuga dolorum! Similique reiciendis ipsa eos nulla pariatur.
-                        Vero velit libero, obcaecati ducimus doloremque dignissimos nemo sunt, veniam laboriosam reprehenderit quod earum provident sequi magni natus a fuga voluptatibus rem perferendis itaque perspiciatis minima est! Quisquam, magni aliquam?</p>
-                    </div>
-                    <div class="div_foto_bufete">
-                        <p class="animate__animated animate__backInLeft">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate id facilis eum consequuntur fugiat quas, iure quod minima sint nobis consequatur ratione, modi tenetur neque dignissimos illo vel itaque a?
-                        Eius distinctio architecto dolores doloribus expedita provident ut ipsa numquam officiis dolor quod vero quidem esse, earum similique impedit eveniet quisquam autem fuga dolorum! Similique reiciendis ipsa eos nulla pariatur.
-                        Vero velit libero, obcaecati ducimus doloremque dignissimos nemo sunt, veniam laboriosam reprehenderit quod earum provident sequi magni natus a fuga voluptatibus rem perferendis itaque perspiciatis minima est! Quisquam, magni aliquam?</p>
-                        <img src="{% static 'images/foto_bufete.jpg' %}" alt="Foto del bufete." class="animate__animated animate__zoomInRight">
-                    </div>
-                </section>
-            </section>
+                            Eius distinctio architecto dolores doloribus expedita provident ut ipsa numquam officiis dolor quod vero quidem esse, earum similique impedit eveniet quisquam autem fuga dolorum! Similique reiciendis ipsa eos nulla pariatur.
+                            Vero velit libero, obcaecati ducimus doloremque dignissimos nemo sunt, veniam laboriosam reprehenderit quod earum provident sequi magni natus a fuga voluptatibus rem perferendis itaque perspiciatis minima est! Quisquam, magni aliquam?</p>
+                        </div>
+                        <div class="div_foto_bufete">
+                            <p class="animate__animated animate__backInLeft">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate id facilis eum consequuntur fugiat quas, iure quod minima sint nobis consequatur ratione, modi tenetur neque dignissimos illo vel itaque a?
+                                Eius distinctio architecto dolores doloribus expedita provident ut ipsa numquam officiis dolor quod vero quidem esse, earum similique impedit eveniet quisquam autem fuga dolorum! Similique reiciendis ipsa eos nulla pariatur.
+                                Vero velit libero, obcaecati ducimus doloremque dignissimos nemo sunt, veniam laboriosam reprehenderit quod earum provident sequi magni natus a fuga voluptatibus rem perferendis itaque perspiciatis minima est! Quisquam, magni aliquam?</p>
+                                <img src="{% static 'images/foto_bufete.jpg' %}" alt="Foto del bufete." class="animate__animated animate__zoomInRight">
+                            </div>
+                        </section>
+                    </section>
         </div>
     </section>
     <section class="section_contacto" id="contacto">
@@ -117,13 +118,15 @@
             <div class="container_consulta">
                 <h3>¿Tenés alguna consulta?</h3>
                 <h5>¡Nosotros la respondemos!</h5>
-                <form action="" method="post" class="form_contacto_consulta">
+                <form action="/consulta" method="POST" class="form_contacto_consulta">
+                    {% csrf_token %}
                     <label for="name_contacto">Nombre y apellido:</label>
                     <input type="text" name="name_contacto" placeholder="Ingresá tu nombre y apellido...">
                     <label for="correo_contacto">Correo de contacto:</label>
                     <input type="text" name="correo_contacto" placeholder="Ingresá un correo de contacto...">
                     <label for="consulta_contacto">Dejá tu consulta</label>
                     <textarea name="consulta_contacto" minlength="5" maxlength="300" cols="50" rows="5" style="resize: none;"></textarea>
+                    <input type="submit" value="Enviar" id="button_reservar">
                 </form>
             </div>
             <div class="container_preguntas_frecuentes">

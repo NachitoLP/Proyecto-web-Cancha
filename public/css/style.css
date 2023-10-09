@@ -322,6 +322,8 @@
   .section_contacto .titulo_contacto {
     margin: auto;
     margin-bottom: 20px;
+    font-weight: bolder;
+    font-size: 28px;
     padding: 10px 0px;
     color: white;
     text-align: center; }
@@ -333,7 +335,9 @@
       width: 50%; }
       .section_contacto .containers_contacto .container_consulta h3 {
         color: white;
-        text-align: center; }
+        font-weight: bold;
+        text-align: center;
+        font-size: 24px; }
       .section_contacto .containers_contacto .container_consulta h5 {
         color: white;
         font-size: 20px;
@@ -358,7 +362,8 @@
             font-weight: 500; }
         .section_contacto .containers_contacto .container_consulta .form_contacto_consulta label {
           margin: auto;
-          color: white; }
+          color: white;
+          font-weight: 600; }
         .section_contacto .containers_contacto .container_consulta .form_contacto_consulta textarea {
           width: 60%;
           padding: 10px;
@@ -371,11 +376,30 @@
             text-align: center;
             color: black;
             font-weight: 500; }
+        .section_contacto .containers_contacto .container_consulta .form_contacto_consulta #button_reservar {
+          color: white;
+          font-weight: bold;
+          text-decoration: none;
+          transition: 0.3s;
+          font-size: 18px;
+          background-color: #08663f;
+          border-radius: 10px;
+          border: none;
+          margin: 20px auto;
+          width: 120px;
+          height: 45px;
+          display: block; }
+          .section_contacto .containers_contacto .container_consulta .form_contacto_consulta #button_reservar:hover {
+            background-color: rgba(0, 182, 118, 0.8);
+            transition: 0.3s;
+            color: white; }
     .section_contacto .containers_contacto .container_preguntas_frecuentes {
       width: 50%; }
       .section_contacto .containers_contacto .container_preguntas_frecuentes h3 {
         text-transform: capitalize;
         color: white;
+        font-weight: bold;
+        font-size: 24px;
         text-align: center;
         margin-bottom: 50px; }
       .section_contacto .containers_contacto .container_preguntas_frecuentes .accordion {
@@ -390,6 +414,7 @@
           .section_contacto .containers_contacto .container_preguntas_frecuentes .accordion .accordion-item .accordion-header {
             color: white; }
             .section_contacto .containers_contacto .container_preguntas_frecuentes .accordion .accordion-item .accordion-header .accordion-button {
+              font-weight: 600;
               color: white;
               border-radius: 0px;
               font-size: 18px; }

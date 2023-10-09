@@ -5,6 +5,8 @@
     .titulo_contacto{
         margin: auto;
         margin-bottom: 20px;
+        font-weight: bolder;
+        font-size: 28px;
         padding: 10px 0px;
         color: white;
         text-align: center;
@@ -18,7 +20,9 @@
             width: 50%;
             h3{
                 color: white;
+                font-weight: bold;
                 text-align: center;
+                font-size: 24px;
             }
             h5{
                 color: white;
@@ -50,6 +54,7 @@
                 label{
                     margin: auto;
                     color: white;
+                    font-weight: 600;
                 }
                 textarea{
                     width: 60%;
@@ -65,6 +70,26 @@
                         font-weight: 500;
                     }
                 }
+                #button_reservar{
+                    color: white;
+                    font-weight: bold;
+                    text-decoration: none;
+                    transition: 0.3s;
+                    font-size: 18px;
+                    background-color: $color-secundary;
+                    border-radius: 10px;
+                    border: none;
+                    margin: 20px auto;
+                    width: 120px;
+                    height: 45px;
+                    display: block;
+    
+                    &:hover {
+                        background-color: $color-primary;
+                        transition: 0.3s;
+                        color: rgb(255, 255, 255);
+                    }
+                }
             }
         }
         .container_preguntas_frecuentes{
@@ -73,6 +98,8 @@
             h3 {
                 text-transform: capitalize;
                 color: white;
+                font-weight: bold;
+                font-size: 24px;
                 text-align: center;
                 margin-bottom: 50px;
             }
@@ -89,8 +116,9 @@
 
                     .accordion-header {
                         color: white;
-
+                        
                         .accordion-button {
+                            font-weight: 600;
                             color: white;
                             border-radius: 0px;
                             font-size: 18px;
