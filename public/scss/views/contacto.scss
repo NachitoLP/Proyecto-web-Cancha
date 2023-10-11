@@ -155,3 +155,29 @@
         }
     }
 }
+
+@media(max-width:1000px){
+    .containers_contacto{
+        flex-direction: row !important;
+        .container_consulta{
+            width: 100% !important;
+            .form_contacto_consulta{
+                input{
+                    width: 80% !important;
+                }
+                textarea{
+                    width: 80% !important;
+                }
+                #button_reservar{
+                    width: 30% !important;
+                }
+            }
+        }
+        .container_preguntas_frecuentes{
+            width: 80% !important;
+            h3{
+                margin-top: 20px;
+            }
+        }
+    }
+}

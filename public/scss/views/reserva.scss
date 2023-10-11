@@ -122,7 +122,7 @@
             height: fit-content !important;
             .div_conocenos_texto{
                 width: 100% !important;
-                margin: 20px 0px !important;
+                margin: 20px 20px !important;
                 text-align: center;
                 p{
                     width: 100% !important;
@@ -149,7 +149,7 @@
     .div_informacion_util_cel{
         display: block !important;
         background-color: rgba(0, 0, 0, 0.4);
-        padding: 10px;
+        padding: 15px;
         margin: 20px auto;
         h3{
             font-size: 30px;
@@ -160,11 +160,16 @@
         }
         p{
             font-size: 18px;
-            text-align: center;
+            text-align: justify;
             margin: 0px 20px;
             color: rgb(255, 255, 255);
             font-weight: 500;
         }
+    }
+}
 
+@media(max-width:700px){
+    .div_conocenos{
+        width: 100% !important;
     }
 }

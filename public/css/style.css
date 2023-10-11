@@ -109,7 +109,7 @@
     height: fit-content !important; }
     .section_reservas .div_conocenos .div_conocenos_texto {
       width: 100% !important;
-      margin: 20px 0px !important;
+      margin: 20px 20px !important;
       text-align: center; }
       .section_reservas .div_conocenos .div_conocenos_texto p {
         width: 100% !important; }
@@ -127,7 +127,7 @@
   .div_informacion_util_cel {
     display: block !important;
     background-color: rgba(0, 0, 0, 0.4);
-    padding: 10px;
+    padding: 15px;
     margin: 20px auto; }
     .div_informacion_util_cel h3 {
       font-size: 30px;
@@ -137,10 +137,14 @@
       margin: 10px 0px; }
     .div_informacion_util_cel p {
       font-size: 18px;
-      text-align: center;
+      text-align: justify;
       margin: 0px 20px;
       color: white;
       font-weight: 500; } }
+
+@media (max-width: 700px) {
+  .div_conocenos {
+    width: 100% !important; } }
 
 .body_login {
   background: #f6f5f7;
@@ -497,6 +501,22 @@
               border-left: 1px solid rgba(0, 182, 118, 0.8); }
               .section_contacto .containers_contacto .container_preguntas_frecuentes .accordion .accordion-item .accordion-header .accordion-button:is(.collapsed)::after {
                 background-image: unset; }
+
+@media (max-width: 1000px) {
+  .containers_contacto {
+    flex-direction: row !important; }
+    .containers_contacto .container_consulta {
+      width: 100% !important; }
+      .containers_contacto .container_consulta .form_contacto_consulta input, .containers_contacto .container_consulta .form_contacto_consulta .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div select, .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div .containers_contacto .container_consulta .form_contacto_consulta select {
+        width: 80% !important; }
+      .containers_contacto .container_consulta .form_contacto_consulta textarea {
+        width: 80% !important; }
+      .containers_contacto .container_consulta .form_contacto_consulta #button_reservar {
+        width: 30% !important; }
+    .containers_contacto .container_preguntas_frecuentes {
+      width: 80% !important; }
+      .containers_contacto .container_preguntas_frecuentes h3 {
+        margin-top: 20px; } }
 
 /* COMPONENTES */
 /* ICONOS */
