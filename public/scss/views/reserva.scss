@@ -113,3 +113,63 @@
         }
     }
 }
+
+
+@media(max-width:1350px){
+    .section_reservas{
+        .div_conocenos{
+            justify-content: center;
+            height: fit-content !important;
+            .div_conocenos_texto{
+                width: 100% !important;
+                margin: 20px 0px !important;
+                text-align: center;
+                p{
+                    width: 100% !important;
+                }
+            }
+            .div_form_reservar{
+                padding-right: 0px !important;
+                width: 60% !important;
+            }
+        }
+        .div_informacion_util{
+            margin-left: 0px !important;
+        }
+    }
+}
+
+@media(max-width:1170px){
+    .section_reservas{
+        .div_informacion_util{
+            display: none !important;
+        }
+    }
+    .div_informacion_util_cel{
+        display: block !important;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 10px;
+        margin: 20px auto;
+        h3{
+            font-size: 30px;
+            font-weight: 600;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            margin: 10px 0px;
+        }
+        p{
+            font-size: 18px;
+            text-align: center;
+            margin: 0px 20px;
+            color: rgb(255, 255, 255);
+            font-weight: 500;
+        }
+
+    }
+}
+
+@media(max-width:890px){
+    .div_form_reservar{
+        width: 80% !important;
+    }
+}
