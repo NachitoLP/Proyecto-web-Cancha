@@ -130,7 +130,7 @@
             }
             .div_form_reservar{
                 padding-right: 0px !important;
-                width: 60% !important;
+                width: 80% !important;
             }
         }
         .div_informacion_util{
@@ -141,6 +141,7 @@
 
 @media(max-width:1170px){
     .section_reservas{
+        height: fit-content !important;
         .div_informacion_util{
             display: none !important;
         }
@@ -165,11 +166,5 @@
             font-weight: 500;
         }
 
-    }
-}
-
-@media(max-width:890px){
-    .div_form_reservar{
-        width: 80% !important;
     }
 }

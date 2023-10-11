@@ -72,13 +72,20 @@
 
 /* NAV RESPONSIVE */
 
+@media(max-width:1300px){
+    .img_fondo_nav{
+        display: none !important;
+    }
+}
+
 @media(max-width:600px) {
     .header_nav {
         .btn_check {
             display: block !important;
+            line-height: 70px !important;
             margin-left: 20px;
         }
-
+        
         #check:checked~.header_navbar_list {
             left: 0;
         }
