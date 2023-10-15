@@ -26,7 +26,7 @@ def sessionLogIn(request):
                 })
             else:
                 login(request, user)
-                return redirect('http://127.0.0.1:8000/')
+                return redirect('http://127.0.0.1:8080/')
 
 def sessionRegister(request):
     if request.method == "GET":
@@ -47,7 +47,7 @@ def sessionRegister(request):
                     )
                 user.save()
                 login(request, user)
-                return redirect('http://127.0.0.1:8000/')
+                return redirect('http://127.0.0.1:8080/')
             except IntegrityError:
                 return render(request, 'login/login.html',{
                     "error": '¡El usuario ingresado ya existe!'
@@ -55,4 +55,4 @@ def sessionRegister(request):
 
 def sessionLogOut(request) :
     logout(request)
-    return redirect('http://127.0.0.1:8000/')
+    return redirect('http://127.0.0.1:8080/')
