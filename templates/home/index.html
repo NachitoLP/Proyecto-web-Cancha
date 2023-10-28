@@ -54,16 +54,15 @@
                             <p>Vení a conocer nuestro espacio y a jugar fútbol en nuestra cancha.</p>
                         </div>
                         <div class="div_form_reservar">
-                            <form action="/reservar" method="POST">
+                            {% if messages %}
+                                {% for message in messages %}
+                                <div class="body_home_message" style="text-align: center;">
+                                    <p><strong>{{message}}</strong></p>
+                                </div>
+                                {% endfor %}
+                            {% endif %}
+                            <form action="/reservar/" method="POST">
                                 {% csrf_token %}
-                                <div>
-                                    <label for="nombre">Nombre</label>
-                                    <input type="text" name="nombre" placeholder="Escribí tu nombre...">
-                                </div>
-                                <div>
-                                    <label for="apellido">Apellido</label>
-                                    <input type="text" name="apellido" placeholder="Escribí tu apellido...">
-                                </div>
                                 <div>
                                     <label for="dia">Seleccioná un día</label>
                                     <input type="date" name="dia" id="input_type_date">
@@ -72,17 +71,9 @@
                                     <label for="horario">Seleccioná un horario</label>
                                     <select name="horario" id="select_horario">
                                         <option value="default">-</option>
-                                        <option value="13hs">13:00</option>
-                                        <option value="14hs">14:00</option>
-                                        <option value="15hs">15:00</option>
-                                        <option value="16hs">16:00</option>
-                                        <option value="17hs">17:00</option>
-                                        <option value="18hs">18:00</option>
-                                        <option value="19hs">19:00</option>
-                                        <option value="20hs">20:00</option>
-                                        <option value="21hs">21:00</option>
-                                        <option value="22hs">22:00</option>
-                                        <option value="23hs">23:00</option>
+                                        {% for x in object_list %}
+                                            <option value={{x}}>{{x}}</option>
+                                        {% endfor %}
                                     </select>
                                 </div>
                                 <input type="submit" value="Reservar" id="button_reservar">
@@ -122,7 +113,7 @@
             <div class="container_consulta">
                 <h3>¿Tenés alguna consulta?</h3>
                 <h5>¡Nosotros la respondemos!</h5>
-                <form action="/consulta" method="POST" class="form_contacto_consulta">
+                <form action="/consultar/" method="POST" class="form_contacto_consulta">
                     {% csrf_token %}
                     <label for="name_contacto">Nombre y apellido:</label>
                     <input type="text" name="name_contacto" placeholder="Ingresá tu nombre y apellido...">

@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from applications.home.views import IndexView, sessionLogIn, sessionRegister, sessionLogOut
+from applications.reservas.views import reservarCancha
+from applications.consultas.views import consultas
 
 
 urlpatterns = [
@@ -25,4 +27,6 @@ urlpatterns = [
     path('sign-in/', sessionLogIn),
     path('sign-up/', sessionRegister),
     path('log-out/', sessionLogOut),
+    path('reservar/', reservarCancha),
+    path('consultar/', consultas),
 ]

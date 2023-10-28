@@ -10,6 +10,14 @@ ALLOWED_HOSTS = []
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'dbcancha',
+    #     'USER': 'django_postgres',
+    #     'PASSWORD': '9546',
+    #     'HOST': 'localhost',
+    #     'PORT': '8000',
+    # }
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',

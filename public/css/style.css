@@ -32,6 +32,9 @@
         margin: auto 10px;
         width: 40%;
         padding-right: 10px; }
+        .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar .body_home_message {
+          text-align: center;
+          color: white; }
         .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div {
           width: 100%; }
           .section_reserva_instalaciones .section_reservas .div_conocenos .div_form_reservar div label {

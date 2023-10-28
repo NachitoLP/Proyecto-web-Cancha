@@ -1,14 +1,13 @@
 from django.shortcuts import render, redirect
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.http import HttpResponse
 from django.db import IntegrityError
-# Create your views here.
 
-class IndexView(TemplateView):
-    template_name = "home/index.html"
+from ..reservas.models import Horarios
+# Create your views here.
 
 def sessionLogIn(request):
     if request.method == "GET":
@@ -56,3 +55,8 @@ def sessionRegister(request):
 def sessionLogOut(request) :
     logout(request)
     return redirect('http://127.0.0.1:8080/')
+
+
+class IndexView (ListView) :
+    model = Horarios
+    template_name = 'home/index.html'
