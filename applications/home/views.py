@@ -5,9 +5,14 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.http import HttpResponse
 from django.db import IntegrityError
+from django.core.mail import send_mail
+import json
 
 from ..reservas.models import Horarios
 # Create your views here.
+
+with open("secrets.json") as f:
+    secrets = json.load(f)
 
 def sessionLogIn(request):
     if request.method == "GET":
@@ -37,6 +42,11 @@ def sessionRegister(request):
                 })
         else :
             try:
+                
+                subject = f"¡Bienvenido, {request.POST['first_name']}!"
+                emailText = f'Tu usuario se ha registrado con éxito. ¡A partir de ahora podés reservar nuestro espacio cuando gustes!'
+                email_from = secrets['EMAIL_HOST']
+                
                 user = User.objects.create_user(
                     first_name=request.POST['first_name'],
                     last_name=request.POST['last_name'],
@@ -45,6 +55,10 @@ def sessionRegister(request):
                     password=request.POST['password']
                     )
                 user.save()
+                
+                email_receiver = user.email
+                send_mail(subject, emailText, email_from, [email_receiver])
+                
                 login(request, user)
                 return redirect('http://127.0.0.1:8080/')
             except IntegrityError:

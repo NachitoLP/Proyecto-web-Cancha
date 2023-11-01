@@ -1,18 +1,27 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.core.mail import send_mail
 
 from .models import Reserva, Horarios
+import json
 
-# Create your views here.
 
 def reservarCancha(request) :
     from datetime import date, datetime
     import time
     
+    with open("secrets.json") as f:
+        secrets = json.load(f)
+    
     today = datetime.now()
-    print(today)
+    
     alias = "Joaquin.Lopez.Ig"
     valorSeña = 2500
+    
+    subject = "¡Reserva confirmada!"
+    emailText = f'¡Hola, {request.user.first_name}! Tu reserva se ha realizado con éxito. Tenés hasta 24hs hábiles para enviar la seña, es decir, ${valorSeña}, al alias: {alias}. En caso de no enviar la seña dentro del plazo comunicado, la reserva se cancelará automáticamente. ¡Te esperamos!'
+    email_from = secrets['EMAIL_HOST']
+    
     
     if request.method == 'GET' :
         return redirect('http://127.0.0.1:8080/')
@@ -45,7 +54,11 @@ def reservarCancha(request) :
                             user = request.user
                         )
                         reserva.save()
-                        messages.success(request, f'¡Se ha realizado la reserva con éxito! Tenés hasta 24hs hábiles para enviar la seña, es decir, ${valorSeña}, al alias: {alias}.')
+                        
+                        email_receiver = request.user.email
+                        send_mail(subject, emailText, email_from, [email_receiver])
+                        
+                        messages.success(request, f'¡Se ha realizado la reserva con éxito! Te hemos enviado a tu correo la confirmación.')
                         return redirect('http://127.0.0.1:8080/')
                     # En caso de que el mes sea el mismo que el actual, mayor o igual el día.
                     elif date.month == today.month :
@@ -56,7 +69,11 @@ def reservarCancha(request) :
                                 user = request.user
                             )
                             reserva.save()
-                            messages.success(request, f'¡Se ha realizado la reserva con éxito! Tenés hasta 24hs hábiles para enviar la seña, es decir, ${valorSeña}, al alias: {alias}.')
+                            
+                            email_receiver = request.user.email
+                            send_mail(subject, emailText, email_from, [email_receiver])
+                            
+                            messages.success(request, f'¡Se ha realizado la reserva con éxito! Te hemos enviado a tu correo la confirmación.')
                             return redirect('http://127.0.0.1:8080/')
                         elif date.day == today.day :
                             # Mismo día, horario mayor al horario actual
@@ -67,7 +84,11 @@ def reservarCancha(request) :
                                     user = request.user
                                 )
                                 reserva.save()
-                                messages.success(request, f'¡Se ha realizado la reserva con éxito! Tenés hasta 24hs hábiles para enviar la seña, es decir, ${valorSeña}, al alias: {alias}.')
+                                
+                                email_receiver = request.user.email
+                                send_mail(subject, emailText, email_from, [email_receiver])
+                                
+                                messages.success(request, f'¡Se ha realizado la reserva con éxito! Te hemos enviado a tu correo la confirmación.')
                                 return redirect('http://127.0.0.1:8080/')
                             else :
                                 # Hora anterior a la hora actual
